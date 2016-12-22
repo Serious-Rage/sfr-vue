@@ -3,14 +3,16 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/doxy.css" >
+
     <script src="js/prettify.js"></script>
     <script src="js/lang-css.js"></script>
     <style>
         body { margin: 0; padding: 0 }
         pre { margin: 0 }
     </style>
-</head>
+
 <script>
     // This page displays some code styled using a theme named in the
     // query part of the URL.
@@ -37,11 +39,12 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = themeName === 'default'
+        link.href = themeName === 'doxy'
             ? 'css/prettify.css' : themeName + '.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     })();
 </script>
+</head>
 
 <body onload="prettyPrint(); adjustHeightInParent()">
 <div style="width: 40em; display: inline-block">
