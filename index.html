@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>&dagger; SFR-Web &dagger;</title>
-        <meta name="description" content="">
+        <meta name="description" content="SFR-Web">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <head>
         <link rel="stylesheet" href="css/normalize.css">
@@ -35,7 +35,7 @@
 
         <style>
 
-            pre { margin-left: 0 }
+            pre { margin-left: 10px }
         </style>
 
       </head>
@@ -46,25 +46,44 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-
-
+         <!-- Load vue.js -->
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <h1>SFR-Web Development</h1>
+
+
+
+
+
+
         <div id="exercise">
-            <div>
-                <img id="main-logo" v-bind:src="image" style="width:510px;height:215px">
-            </div>
+            <img id="main-logo" v-bind:src="image" style="width:40%; height:auto">
+            <h1>SFR-Web Development</h1>
             <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
             <div>
                 <input type="text" v-bind:value="name">
             </div>
+
             <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
-                <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+                <p>Generated template data  - {{ name }} ({{ age }})</p>
             <!-- 2) Output your age, multiplied by 3 -->
                 <p>{{ age * 3 }}</p>
             <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
                 <p>{{ random() }}</p>
+
+            <!-- experiments and testing -->
+            <!--bind template to data object -->
+            <p> TEST: - {{ info }} <br>
+                RESULTS: -<span class="greenText"> PASS </span>
+            </p>
+            <!-- reference data onject via method in methods object using
+              "this" ( available specifically in VueJS because usually "this" is
+              referencing params within the same object. Here it can reference anythin within
+              the "Vue instance") -->
+            <p> TEST 2: - {{ testMethod() }} <br>
+                RESULTS: -<span class="greenText"> PASS </span>
+            </p>
+
+
+            <!-- TODO -->
             <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
         </div>
 
@@ -78,11 +97,16 @@
 
 
 
-
+        <!-- Try to load jquery stored locally and if cant then use a cdn version -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+        <!-- Load jquery plugins -->
         <script src="js/plugins.js"></script>
+
+        <!--  load authors javascript -->
         <script src="js/main.js"></script>
+
         <!-- Vue.js cdn -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
@@ -113,7 +137,7 @@
                 }
             }
 
-            // Load the necessary CSS
+            // Load the necessary CSS for a particular pretty print theme
             (function () {
                 document.title = 'Theme ' + themeName;
                 // Load the stylesheet that we're demoing.
@@ -125,9 +149,10 @@
                 document.getElementsByTagName('head')[0].appendChild(link);
             })();
         </script>
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script src="js/prettify.js"></script>
         <script src="js/lang-css.js"></script>
+
     </body>
 </html>

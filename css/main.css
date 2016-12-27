@@ -124,10 +124,21 @@ h1 {
 }
 
 #main-logo {
-    position:absolute;
-    top:50px;
-    right:4%;
+    position:static;
+    float:right;
+    /*
+       top:-50px;
+      right:4%;
+   */
 
+}
+
+.greenText {
+    color: green;
+}
+
+.yellowText {
+    color: yellow;
 }
 
 code {
